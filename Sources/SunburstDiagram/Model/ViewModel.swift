@@ -35,7 +35,7 @@ class Sunburst: ObservableObject {
             self.level = level
             self.node = node
 
-            backgroundColor = Color(node.computedBackgroundColor)
+            backgroundColor = node.computedBackgroundColor
             width = totalValue > 0 ? (node.computedValue / totalValue) * 2.0 * .pi : 0
             isTextHidden = !node.showName
         }
@@ -43,7 +43,7 @@ class Sunburst: ObservableObject {
         mutating func update(node: Node, totalValue: Double) {
             self.node = node
 
-            backgroundColor = Color(node.computedBackgroundColor)
+            backgroundColor = node.computedBackgroundColor
             width = totalValue > 0 ? (node.computedValue / totalValue) * 2.0 * .pi : 0
             isTextHidden = !node.showName
         }
